@@ -66,6 +66,19 @@ class RichTextScreen extends StatelessWidget {
             ]
           ),
           ),
+          TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10))
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.red)
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.green)
+              )
+            ),
+          )
         ],
       ),
     );
