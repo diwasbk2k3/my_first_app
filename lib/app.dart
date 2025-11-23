@@ -1,6 +1,6 @@
 // stless
 import 'package:flutter/material.dart';
-import 'package:my_first_app/screen/action_leading_screen.dart';
+import 'package:my_first_app/screen/row_and_column_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ActionLeadingScreen()
+      home: RowAndColumnScreen()
     );
   }
 }
