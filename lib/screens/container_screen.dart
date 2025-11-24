@@ -24,8 +24,8 @@ class ContainerScreen extends StatelessWidget {
             width: 200,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: Colors.green,
               shape: BoxShape.circle,
+              color: Colors.green,
               border: Border.all(
                 color: Colors.amber,
                 width: 5,
