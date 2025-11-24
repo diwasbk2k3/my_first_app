@@ -8,37 +8,38 @@ class ContainerScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "WhatsApp",
+          "Container Screen",
           style: TextStyle(
             color: Colors.white,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
-            fontSize: 30.0,
           ),
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.amber,
       ),
-      body: Center(
-        child: Container(
-        margin: EdgeInsets.all(30),
-        padding: EdgeInsets.all(30),
-        height: 200,
-        width: 300,
-        decoration: BoxDecoration(
-          color: Colors.amber,
-          borderRadius: BorderRadius.circular(10),
-        ),
+      body: SafeArea(
         child: Center(
-          child: Text(
-            "Hello Diwas",
-            style: TextStyle(
+          child: Container(
+            height: 200,
+            width: 200,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
               color: Colors.green,
-              fontWeight: FontWeight.bold,
-              fontSize: 30.0,
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Colors.amber,
+                width: 5,
+              )
             ),
+            child: Text("I am a Container",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white
+            ),),
           ),
         ),
       ),
-      )
     );
   }
 }
