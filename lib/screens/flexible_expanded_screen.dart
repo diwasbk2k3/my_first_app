@@ -6,17 +6,24 @@ class FlexibleExpandedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("My App"),
-      backgroundColor: Colors.green,),
+      appBar: AppBar(title: Text("My App"), backgroundColor: Colors.green),
       body: Center(
         child: Column(
           children: [
             Expanded(
-              child: Container(
-                alignment: Alignment.center,
-                width: double.infinity,
-                decoration: BoxDecoration(color: Colors.amber),
-                child: Text("First Container"),
+              child: GestureDetector(
+                onTap: () => ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Hello World"),
+                    duration: Duration(seconds: 3),
+                  ),
+                ),
+                child: Container(
+                  alignment: Alignment.center,
+                  width: double.infinity,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Text("First Container"),
+                ),
               ),
             ),
             Expanded(

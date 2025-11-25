@@ -6,15 +6,49 @@ class PracticeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("WhatsApp"), backgroundColor: Colors.green),
-      body: Center(
-        child: Text(
-          "Hello Diwas",
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: Text(
+          "WhatsApp",
           style: TextStyle(
-            color: Colors.red,
-            fontSize: 30,
+            color: Colors.white,
             fontWeight: FontWeight.bold,
+            fontSize: 30.0,
           ),
+        ),
+        leading: CircleAvatar(
+          child: Text(
+            "D",
+            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+          ),
+        ),
+        actions: [Icon(Icons.heart_broken_outlined), Icon(Icons.podcasts)],
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  width: 500,
+                  height: 600,
+                  color: Colors.red,
+                ),
+              ),
+            ),
+            SizedBox(height: 40),
+            Expanded(
+              child: Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  width: 500,
+                  height: 600,
+                  color: Colors.green,
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );
