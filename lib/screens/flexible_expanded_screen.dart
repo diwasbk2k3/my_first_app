@@ -14,6 +14,7 @@ class FlexibleExpandedScreen extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
+                    backgroundColor: Colors.yellow,
                     content: Text("Hello World"),
                     duration: Duration(seconds: 3),
                   ),
@@ -27,11 +28,20 @@ class FlexibleExpandedScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
-                alignment: Alignment.center,
-                width: double.infinity,
-                decoration: BoxDecoration(color: Colors.green),
-                child: Text("Second Container"),
+              child: GestureDetector(
+                onDoubleTap: () => ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    backgroundColor: Colors.lightBlue,
+                    content: Text("Hello World"),
+                    duration: Duration(seconds: 3),
+                  ),
+                ),
+                child: Container(
+                  alignment: Alignment.center,
+                  width: double.infinity,
+                  decoration: BoxDecoration(color: Colors.green),
+                  child: Text("Second Container"),
+                ),
               ),
             ),
           ],
