@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/common/my_snackbar.dart';
 
 class FlexibleExpandedScreen extends StatelessWidget {
   const FlexibleExpandedScreen({super.key});
@@ -12,13 +13,9 @@ class FlexibleExpandedScreen extends StatelessWidget {
           children: [
             Expanded(
               child: GestureDetector(
-                onTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    backgroundColor: Colors.yellow,
-                    content: Text("Hello World"),
-                    duration: Duration(seconds: 3),
-                  ),
-                ),
+                onTap: () => {
+                  showMySnackBar(context: context, message: "Hello World", color: Colors.lightBlue)
+                },
                 child: Container(
                   alignment: Alignment.center,
                   width: double.infinity,
@@ -29,13 +26,9 @@ class FlexibleExpandedScreen extends StatelessWidget {
             ),
             Expanded(
               child: GestureDetector(
-                onDoubleTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    backgroundColor: Colors.lightBlue,
-                    content: Text("Hello World"),
-                    duration: Duration(seconds: 3),
-                  ),
-                ),
+                onDoubleTap: () => {
+                  showMySnackBar(context: context, message: "Hello World", color: Colors.red)
+                },
                 child: Container(
                   alignment: Alignment.center,
                   width: double.infinity,
