@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/app.dart';
 import 'package:my_first_app/common/my_snackbar.dart';
 import 'package:my_first_app/widgets/my_button.dart';
+import 'package:my_first_app/widgets/my_textformfield.dart';
 
 class CustomScreen extends StatelessWidget {
   const CustomScreen({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +20,7 @@ class CustomScreen extends StatelessWidget {
                 color: Colors.green,
               ),
               text: "Click Me",
+              color: Colors.green,
             ),
             SizedBox(height: 20),
             MyButton(
@@ -30,6 +31,7 @@ class CustomScreen extends StatelessWidget {
               ),
               text: "Click Me",
             ),
+            MyTextformfield(labelText: "Enter your age", hintText: "e.g 18", controller: TextEditingController(), errorMessage: "Age is required")
           ],
         ),
       ),
