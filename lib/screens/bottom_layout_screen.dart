@@ -25,7 +25,7 @@ class _BottomLayoutScreenState extends State<BottomLayoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Diwas", style: TextStyle(fontFamily: "OpenSans   "),), backgroundColor: Colors.lightBlue,),
+      appBar: AppBar(title: Text("Diwas", style: TextStyle(fontFamily: "OpenSans Bold"),), backgroundColor: Colors.lightBlue,),
       body: lstBottomScreen[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.lightBlueAccent,
